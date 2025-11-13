@@ -82,6 +82,7 @@ const Dashboard: React.FC = () => {
           <p>• Update Account Information</p>
           <p>• Change Password</p>
           <p>• Download Activity Report</p>
+          <p>• <a href="/inform-act-verification" style={{color: '#0066cc', textDecoration: 'underline'}}>INFORM Act Verification</a></p>
         </div>
 
         <div className="dashboard-card">

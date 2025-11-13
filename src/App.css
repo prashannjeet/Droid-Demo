@@ -171,6 +171,342 @@
   line-height: 1.5;
 }
 
+/* INFORM Act Verification Styles */
+.inform-act-container {
+  min-height: 100vh;
+  background-color: #f5f5f5;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.inform-act-card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px;
+  margin-top: 20px;
+}
+
+.inform-act-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 24px;
+  border-bottom: 1px solid #e1e5e9;
+}
+
+.inform-act-header h1 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+}
+
+.close-button {
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: #666;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.close-button:hover {
+  background-color: #f0f0f0;
+}
+
+.inform-act-content {
+  padding: 24px;
+}
+
+.intro-section {
+  margin-bottom: 30px;
+}
+
+.intro-section p {
+  color: #555;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.inform-link {
+  color: #0066cc;
+  text-decoration: underline;
+}
+
+.inform-link:hover {
+  color: #0052a3;
+}
+
+.business-info-section {
+  margin-bottom: 40px;
+}
+
+.info-item {
+  padding: 20px 0;
+  border-bottom: 1px solid #e1e5e9;
+}
+
+.info-item:last-child {
+  border-bottom: none;
+}
+
+.info-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 12px;
+}
+
+.info-header h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+}
+
+.update-link {
+  background: none;
+  border: none;
+  color: #666;
+  font-size: 14px;
+  cursor: pointer;
+  text-decoration: underline;
+  padding: 0;
+  line-height: 1.4;
+  text-align: right;
+  max-width: 200px;
+}
+
+.update-link:hover {
+  color: #333;
+}
+
+.info-value {
+  color: #333;
+  font-size: 16px;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.address-block p,
+.contact-block p {
+  color: #333;
+  font-size: 16px;
+  margin: 4px 0;
+  line-height: 1.4;
+}
+
+.verification-section {
+  background-color: #f8f9fa;
+  border-radius: 6px;
+  padding: 20px;
+}
+
+.warning-message {
+  background-color: #fff3cd;
+  border: 1px solid #ffeaa7;
+  border-radius: 4px;
+  padding: 12px;
+  margin-bottom: 20px;
+}
+
+.warning-message p {
+  color: #856404;
+  margin: 0;
+  font-size: 14px;
+}
+
+.checkbox-group {
+  margin-bottom: 30px;
+}
+
+.checkbox-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 16px;
+  cursor: pointer;
+  position: relative;
+}
+
+.checkbox-item input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkmark {
+  height: 20px;
+  width: 20px;
+  background-color: white;
+  border: 2px solid #ddd;
+  border-radius: 3px;
+  margin-right: 12px;
+  position: relative;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.checkbox-item:hover input ~ .checkmark {
+  border-color: #0066cc;
+}
+
+.checkbox-item input:checked ~ .checkmark {
+  background-color: #0066cc;
+  border-color: #0066cc;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.checkbox-item input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.checkbox-item .checkmark:after {
+  left: 6px;
+  top: 2px;
+  width: 6px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.checkbox-text {
+  color: #333;
+  line-height: 1.4;
+  font-size: 15px;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: flex-start;
+}
+
+.complete-verification-btn {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.complete-verification-btn:hover:not(:disabled) {
+  transform: translateY(-1px);
+}
+
+.complete-verification-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.verify-later-btn {
+  background: white;
+  color: #666;
+  border: 2px solid #ddd;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.verify-later-btn:hover:not(:disabled) {
+  border-color: #999;
+  color: #333;
+}
+
+.verify-later-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.button-loading {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(255,255,255,.3);
+  border-radius: 50%;
+  border-top-color: #fff;
+  animation: spin 1s ease-in-out infinite;
+}
+
+.error-message {
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+  border-radius: 4px;
+  padding: 12px;
+  margin-bottom: 20px;
+}
+
+.error-message p {
+  color: #721c24;
+  margin: 0;
+  font-size: 14px;
+}
+
+.success-message {
+  background-color: #d4edda;
+  border: 1px solid #c3e6cb;
+  border-radius: 4px;
+  padding: 12px;
+  margin-bottom: 20px;
+}
+
+.success-message p {
+  color: #155724;
+  margin: 0;
+  font-size: 14px;
+}
+
+.loading-state,
+.error-state {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.loading-spinner {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border: 3px solid rgba(102, 126, 234, 0.3);
+  border-radius: 50%;
+  border-top-color: #667eea;
+  animation: spin 1s ease-in-out infinite;
+  margin-bottom: 16px;
+}
+
+.retry-button {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  margin-top: 16px;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .login-card {
@@ -185,5 +521,38 @@
   .dashboard-header {
     flex-direction: column;
     gap: 15px;
+  }
+
+  .inform-act-container {
+    padding: 10px;
+  }
+
+  .inform-act-card {
+    margin-top: 10px;
+  }
+
+  .inform-act-content {
+    padding: 16px;
+  }
+
+  .info-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .update-link {
+    text-align: left;
+    max-width: none;
+  }
+
+  .action-buttons {
+    flex-direction: column;
+  }
+
+  .complete-verification-btn,
+  .verify-later-btn {
+    width: 100%;
+    justify-content: center;
   }
 }
