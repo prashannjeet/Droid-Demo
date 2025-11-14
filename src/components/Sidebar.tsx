@@ -20,6 +20,13 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
 
   const menuItems: MenuItem[] = [
     {
+      id: 'home',
+      label: 'Home',
+      icon: '🏠',
+      path: '/',
+      description: 'Return to the main marketplace'
+    },
+    {
       id: 'dashboard',
       label: 'Dashboard',
       icon: '📊',
