@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import TitleBar from './TitleBar';
 import Sidebar from './Sidebar';
+import Footer from './Footer';
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -68,7 +69,10 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
             : 'with-sidebar-closed'
           : 'full-width'
       }`}>
-        {children}
+        <div className="page-content">
+          {children}
+        </div>
+        {!isLoginPage && <Footer />}
       </main>
     </div>
   );
